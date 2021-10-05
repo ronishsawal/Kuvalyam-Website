@@ -47,7 +47,7 @@
             </div> -->
             <div class="overlay"></div>
             <div class="video parallax">
-                <video src="./img/video.mp4" autoplay muted loop></video>
+                <video src="./img/video.mp4" autoplay muted loop data-parallax></video>
             </div>
         </section>
         <section id="projects">
@@ -61,7 +61,10 @@
             </div>
             <div class="scroll">
                 <div class="item">
-                    <img src="./img/sample1.jpg" alt="">
+                    <div class="img-cont">
+                        <img src="./img/circle.svg" alt="" class="rot">
+                        <img src="./img/sample1.jpg" alt="">
+                    </div>
                     <div class="item-content">
                         <p>Established in Delhi, INDIA in 2005 Dreamz</p>
                         <p>Project is one of the oldest and luxurious</p>
@@ -124,6 +127,7 @@
                     <div class="height-diff-up">
                         <!-- <img src="./img/section2-img1.jpg" alt=""> -->
                         <!-- <div class="height-diff-up-img"></div> -->
+                        <img src="./img/circle.svg" alt="" class="rot wid">
                     </div>
                     <div class="height-diff-down">
                         <!-- <img src="./img/section2-img2.jpg" alt=""> -->
@@ -277,6 +281,85 @@
                 focus: 'center',
             }).mount();
         });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        const parallaxElements = document.querySelectorAll('[data-parallax]');
+
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            parallaxElements.forEach((el) => {
+                const top = el.offsetTop;
+                el.style.transform = `translateY(-${(y > top) ? y / 5 : 0}px)`;
+            });
+        });
+
+        let container = document.querySelector(".height-diff-up")
+
+        let height;
+        function setHeight() {
+            height = container.clientHeight;
+            // document.body.style.height = height + "px";
+        }
+        ScrollTrigger.addEventListener("refreshInit", setHeight);
+
+        // smooth scrolling container
+        gsap.to(container, {
+            y: "300px",
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".dark",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+                invalidateOnRefresh: true
+            }
+        });
+
+        let containera = document.querySelector(".height-diff-down")
+
+        let heighta;
+        function setHeighta() {
+            heighta = container.clientHeight;
+            // document.body.style.height = height + "px";
+        }
+        ScrollTrigger.addEventListener("refreshInit", setHeighta);
+
+        // smooth scrolling container
+        gsap.to(containera, {
+            y: "-300px",
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".dark",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+                invalidateOnRefresh: true
+            }
+        });
+
+        let rot = document.querySelectorAll(".rot")
+        gsap.set(rot[0], {y: "-50%", x: "50%"})
+        gsap.set(rot[1], {y: "-50%", x: "30%"})
+        let anima = gsap.to(rot, { rotation: 360, transformOrigin: "50% 50%", repeat: -1, duration: 10, ease: "linear" })
+
+        console.log(anima)
+        rot[0].addEventListener('mouseover', () => {
+            anima.pause()
+        })
+        rot[0].addEventListener('mouseleave', () => {
+            anima.play()
+        })
+
+        rot[1].addEventListener('mouseover', () => {
+            anima.pause()
+        })
+        rot[1].addEventListener('mouseleave', () => {
+            anima.play()
+        })
+
     </script>
 </body>
 
