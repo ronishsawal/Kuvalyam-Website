@@ -130,6 +130,10 @@ section:not(.without) {
     z-index: 1!important;
 }
 
+.overlay.top{
+    z-index: 0;
+}
+
 .center:nth-of-type(2) {
     z-index: 2;
 }
@@ -304,7 +308,7 @@ section:nth-of-type(2)>div {
     margin-bottom: 30px;
 }
 
-.img-cont{
+.img-cont {
     position: relative;
     margin-bottom: 30px;
 }
@@ -345,20 +349,49 @@ section:nth-of-type(3) {
     min-height: 50vh;
     height: 100%;
     width: 100%;
+    justify-self: center;
 }
 
 .height-diff-up {
     position: relative;
     /* transform: translateY(-20%); */
-    background: url("./img/section2-img1.jpg") no-repeat no-repeat center top;
-    background-size: contain;
-    margin-left: auto;
+    /* background: url("./img/section2-img1.jpg") no-repeat no-repeat center top; */
+    /* background-size: contain; */
+    /* margin-left: auto; */
     /* height: 200%; */
     top: -20%;
-    position: relative;
+    /* overflow: hidden; */
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    width: 80% !important;
+    height: 80% !important;
+    margin: 0 auto;
 }
 
 .rot{
+    z-index: 21;
+}
+
+.height-diff-down-img {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.height-diff-up-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rot {
     position: absolute;
     top: 0;
     right: 0;
@@ -366,7 +399,7 @@ section:nth-of-type(3) {
     width: 30%;
 }
 
-.wid{
+.wid {
     width: 40%;
 }
 
@@ -374,9 +407,9 @@ section:nth-of-type(3) {
     /* transform: translateY(20%); */
     top: 20%;
     position: relative;
-    /* width: max-content; */
-    background: url("./img/section2-img2.jpg") no-repeat no-repeat center top;
-    background-size: contain;
+    width: 80% !important;
+    height: 80% !important;
+    margin: 0 auto;
 }
 
 .saying {
@@ -606,7 +639,7 @@ button.splide__pagination__page.is-active {
         grid-template-rows: 50% 50%;
         align-items: center;
     }
-    .wid{
+    .wid {
         width: 50%;
     }
     .section-right {

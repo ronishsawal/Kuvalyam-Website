@@ -36,18 +36,9 @@
                 <img src="./img/section1.svg" alt="">
                 <div>Explore Projects</div>
             </div>
-            <!-- <div class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide"><img src="./img/bg1.jpg" alt=""></li>
-                        <li class="splide__slide"><img src="./img/collage.jpg" alt=""></li>
-                        <li class="splide__slide"><img src="./img/collage.jpg" alt=""></li>
-                    </ul>
-                </div>
-            </div> -->
-            <div class="overlay"></div>
-            <div class="video parallax">
-                <video src="./img/video.mp4" autoplay muted loop data-parallax></video>
+            <div class="overlay top"></div>
+            <div class="video parallax" data-parallax>
+                <video src="./img/video.mp4" autoplay muted loop></video>
             </div>
         </section>
         <section id="projects">
@@ -125,12 +116,12 @@
                 </div>
                 <div class="section-right">
                     <div class="height-diff-up">
-                        <!-- <img src="./img/section2-img1.jpg" alt=""> -->
+                        <img src="./img/section2-img1.jpg" alt="" class="height-diff-up-img">
                         <!-- <div class="height-diff-up-img"></div> -->
                         <img src="./img/circle.svg" alt="" class="rot wid">
                     </div>
                     <div class="height-diff-down">
-                        <!-- <img src="./img/section2-img2.jpg" alt=""> -->
+                        <img src="./img/section2-img2.jpg" alt="" class="height-diff-up-img">
                         <!-- <div class="height-diff-down-img"></div> -->
 
                     </div>
@@ -189,44 +180,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="scroll scroll2">
-                <div class="item">
-                    <h1>Aadarsh Singh</h1>
-                    <p>Singer, Songwritter</p>
-                    <img src="./img/“.svg" alt="">
-                    <p>Kuvalayam is the next step in our evolution just like the bloom of a lotus flower which is an
-                        exaggeration over its stem form.</p>
-                    <img src="./img/“ (1).svg" alt="">
-                    <img src="./img/dude.jpg" alt="">
-                </div>
-                <div class="item">
-                    <h1>Aadarsh Singh</h1>
-                    <p>Singer, Songwritter</p>
-                    <img src="./img/“.svg" alt="">
-                    <p>Kuvalayam is the next step in our evolution just like the bloom of a lotus flower which is an
-                        exaggeration over its stem form.</p>
-                    <img src="./img/“ (1).svg" alt="">
-                    <img src="./img/dude.jpg" alt="">
-                </div>
-                <div class="item">
-                    <h1>Aadarsh Singh</h1>
-                    <p>Singer, Songwritter</p>
-                    <img src="./img/“.svg" alt="">
-                    <p>Kuvalayam is the next step in our evolution just like the bloom of a lotus flower which is an
-                        exaggeration over its stem form.</p>
-                    <img src="./img/“ (1).svg" alt="">
-                    <img src="./img/dude.jpg" alt="">
-                </div>
-                <div class="item">
-                    <h1>Aadarsh Singh</h1>
-                    <p>Singer, Songwritter</p>
-                    <img src="./img/“.svg" alt="">
-                    <p>Kuvalayam is the next step in our evolution just like the bloom of a lotus flower which is an
-                        exaggeration over its stem form.</p>
-                    <img src="./img/“ (1).svg" alt="">
-                    <img src="./img/dude.jpg" alt="">
-                </div>
-            </div> -->
         </section>
         <section>
             <div class="overlay"></div>
@@ -288,64 +241,56 @@
         gsap.registerPlugin(ScrollTrigger)
         const parallaxElements = document.querySelectorAll('[data-parallax]');
 
-        window.addEventListener('scroll', () => {
-            const y = window.scrollY;
-            parallaxElements.forEach((el) => {
-                const top = el.offsetTop;
-                el.style.transform = `translateY(-${(y > top) ? y / 5 : 0}px)`;
-            });
-        });
+        var cumulativeOffset = function (element) {
+            var top = 0, left = 0;
+            do {
+                top += element.offsetTop || 0;
+                left += element.offsetLeft || 0;
+                element = element.offsetParent;
+            } while (element);
 
-        let container = document.querySelector(".height-diff-up")
+            return {
+                top: top,
+                left: left
+            };
+        };
 
-        let height;
-        function setHeight() {
-            height = container.clientHeight;
-            // document.body.style.height = height + "px";
-        }
-        ScrollTrigger.addEventListener("refreshInit", setHeight);
-
-        // smooth scrolling container
-        gsap.to(container, {
-            y: "300px",
-            ease: "none",
+        gsap.to(".height-diff-up", {
             scrollTrigger: {
-                trigger: ".dark",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-                invalidateOnRefresh: true
-            }
-        });
+                trigger: "section.dark",
+                scrub: true,
+                markers: true,
+            },
+            yPercent: 40
 
-        let containera = document.querySelector(".height-diff-down")
+        })
 
-        let heighta;
-        function setHeighta() {
-            heighta = container.clientHeight;
-            // document.body.style.height = height + "px";
-        }
-        ScrollTrigger.addEventListener("refreshInit", setHeighta);
-
-        // smooth scrolling container
-        gsap.to(containera, {
-            y: "-300px",
-            ease: "none",
+        gsap.to(".height-diff-down", {
             scrollTrigger: {
-                trigger: ".dark",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-                invalidateOnRefresh: true
-            }
-        });
+                trigger: "section.dark",
+                scrub: true,
+                markers: true,
+            },
+            yPercent: -40
+
+        })
+
+
+        // window.addEventListener('scroll', () => {
+        //     const y = window.scrollY;
+        //     parallaxElements.forEach((el, i) => {
+        //         const { top, left } = cumulativeOffset(el);
+        //         el.style.transform = `translateY(-${(y > top) ? y / 5 : 0}px)`;
+        //     });
+        // });
 
         let rot = document.querySelectorAll(".rot")
-        gsap.set(rot[0], {y: "-50%", x: "50%"})
-        gsap.set(rot[1], {y: "-50%", x: "30%"})
-        let anima = gsap.to(rot, { rotation: 360, transformOrigin: "50% 50%", repeat: -1, duration: 10, ease: "linear" })
+        gsap.set(rot[0], { y: "-50%", x: "50%" })
+        gsap.set(rot[1], { y: "-50%", x: "50%" })
+        let anima = gsap.to(rot[0], { rotation: 360, transformOrigin: "50% 50%", repeat: -1, duration: 10, ease: "linear" })
+        let animaa = gsap.to(rot[1], { rotation: 360, transformOrigin: "50% 50%", repeat: -1, duration: 10, ease: "linear" })
 
-        console.log(anima)
+        // console.log(anima)
         rot[0].addEventListener('mouseover', () => {
             anima.pause()
         })
@@ -354,12 +299,11 @@
         })
 
         rot[1].addEventListener('mouseover', () => {
-            anima.pause()
+            animaa.pause()
         })
         rot[1].addEventListener('mouseleave', () => {
-            anima.play()
+            animaa.play()
         })
-
     </script>
 </body>
 
