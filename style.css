@@ -339,7 +339,7 @@ section:nth-of-type(3) {
 }
 
 .section-left>p {
-    width: 50%;
+    width: 70%;
     margin-right: auto;
     line-height: 2;
 }
@@ -414,13 +414,20 @@ section:nth-of-type(3) {
 
 .saying {
     position: relative;
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
-    font-family: 'Philosopher', sans-serif;
-    margin-top: 250px;
+    margin-top: 150px;
     color: #B69B6E;
-    font-size: 2rem;
     text-align: center;
+}
+
+.title:nth-of-type(2){
+    margin-bottom: 20px;
+}
+
+.saying > div{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2rem;
 }
 
 /* .scroll2 {
@@ -447,6 +454,7 @@ section:nth-of-type(3) {
 
 .splide__slide>.item>h1 {
     margin: 0;
+    font-family: 'Philosopher', sans-serif;
 }
 
 .splide__slide>.item>p:nth-of-type(1) {
@@ -612,6 +620,25 @@ button.splide__pagination__page.is-active {
     background: #000000;
 }
 
+@media(max-width: 1500px) {
+    .nav{
+        padding: 20px 10vw;
+    }
+
+}
+
+@media(max-width: 1300px) {
+    .nav{
+        padding: 20px 5vw;
+    }
+
+    .nav>div>p, .nav>div>div{
+        margin: 20px 15px;
+    }
+
+}
+
+
 @media(max-width: 900px) {
     :root {
         font-size: 13px;
@@ -709,6 +736,9 @@ button.splide__pagination__page.is-active {
     .lotus-right>img {
         position: absolute;
         right: -30px;
+    }
+    .title:nth-of-type(2) {
+        margin-bottom: 0;
     }
 }
 

@@ -128,7 +128,8 @@
                 </div>
             </div>
             <div class="saying">
-                “ Kuvalayam is a vision to leave behind a visual mark of quality and inspiration “
+                <div>“ Kuvalayam is a vision to leave behind</div>
+                <div>a visual mark of quality and inspiration “</div>
             </div>
         </section>
         <section>
@@ -228,11 +229,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.splide', {
+            let splide = new Splide('.splide', {
                 type: 'loop',
                 autoWidth: true,
                 focus: 'center',
             }).mount();
+
+            window.on('resize', function () {
+                splide.go(1)
+            });
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
