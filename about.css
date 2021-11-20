@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    line-height: 32px;
+}
+
+.nav{
+    color: black;
+}
+
+section{
+    padding: 50px 15vw !important; 
+}
+
+section:nth-of-type(2)>div {
+    position: relative;
+    margin: 0;
+}
+
+.title{
+    margin: 100px 0;
+    margin-top: 140px;
+}
+
+.boss{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.boss > .right{
+    padding: 0 50px;
+}
+
+.boss > .left > img{
+    width: 200px;
+}
+
+.boss > .right > h3, .boss > .right > p{
+    margin: 5px 0;
+}
+
+.boss > .right > p{
+    font-style: italic;
+}
+
+.boss > .right > div{
+    margin: 35px 0;
+}
+
+.boss > .right > button{
+    border: solid black 1px;
+    background-color: white;
+    padding: 15px 30px;
+    /* display: grid;
+    grid-template-columns: auto auto;
+    place-items: center; */
+}
+
+/* .boss > .right > button > img{
+    display: block;
+    margin-left: 10px;
+} */
+
+.boss > .right > button > p{
+    margin: 0;
+}
+
+.work > img{
+    position: relative;
+    width: 100%;
+}
+
+.work{
+    position: relative;
+}
+
+.title:nth-of-type(2) {
+    margin-top: 120px;
+    margin-bottom: 90px;
+}
+
+.work > .info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    transform: translate(20%, -50%);
+    z-index: 1;
+    background-color: #19312E;
+    color: white;
+    padding: 50px;
+    font-style: italic;
+    line-height: 32px;
+}
+
+.facts{
+    margin: 130px 0;
+    display: grid;
+    grid-template-columns: auto 60%;
+    position: relative;
+}
+
+.facts > .left > img{
+    /* height: 100%; */
+    margin-right: 30px;
+}
+
+.facts > .left{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.wid{
+    width: 70%;
+}
+
+.facts > .left > div{
+    display: inline;
+    position: relative;
+    height: 100%;
+}
+
+.facts > .right{
+    padding: 0 80px;
+    align-self: center;
+}
+
+.facts > .left{
+    position: relative;
+}
+
+.stat{
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    width: max-content;
+}
+
+.num{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.nav>div>div{
+    border-color: black;
+}
+
+section:nth-of-type(5){
+    padding: 0 !important;
+}
+
+@media(max-width: 1500px) {
+
+}
+
+@media(max-width: 1300px) {
+
+}
+
+
+@media(max-width: 900px) {
+
+    *{
+        line-height: 20px;
+    }
+
+    section {
+        padding: 50px 10vw !important;
+    }
+
+    .boss{
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+
+    .boss > .right{
+        padding: 0;
+    }
+
+    .work > .info{
+        width: 40vw;
+        line-height: 20px;
+        padding: 10px;
+        font-size: 0.7rem;
+    }
+
+    .facts{
+        margin: 90px 0;
+        margin-bottom: 50px;
+    }
+
+    .facts > .left{
+        padding: 0 20px;
+        position: relative;
+        width: 100%;
+    }
+
+    .facts > .right{
+        padding: 0;
+    }
+
+    .stat{
+        text-align: center;
+    }
+
+    .facts > .left > img{
+        /* width: 35vw; */
+        width: 90%;
+        margin: 0;
+    }
+
+    .facts > .left > div{
+        margin: 0;
+        justify-self: right;
+        width: 100%;
+
+        /* overflow: hidden; */
+    }
+
+    .facts > .left > div > img:not(.rot){
+        /* width: 25vw; */
+        margin: 0;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+    }
+
+    .facts{
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+
+    .wid{
+        width: 50%;
+    }
+}
+
+@media(max-width: 450px) {
+    
+}
+
+@media(max-height: 700px) {
+    
+}
