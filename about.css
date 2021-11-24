@@ -17,6 +17,11 @@ section:nth-of-type(2)>div {
     margin: 0;
 }
 
+section:nth-of-type(2) > .title{
+    margin: 100px 0;
+    margin-bottom: 60px;
+}
+
 .title{
     margin: 100px 0;
     margin-top: 140px;
@@ -32,7 +37,11 @@ section:nth-of-type(2)>div {
 }
 
 .boss > .left > img{
-    width: 200px;
+    height: 100%;
+}
+
+#projects{
+    padding-right: 0 !important;
 }
 
 .boss > .right > h3, .boss > .right > p{
@@ -51,15 +60,15 @@ section:nth-of-type(2)>div {
     border: solid black 1px;
     background-color: white;
     padding: 15px 30px;
-    /* display: grid;
-    grid-template-columns: auto auto;
-    place-items: center; */
 }
 
-/* .boss > .right > button > img{
-    display: block;
-    margin-left: 10px;
-} */
+.height-diff-up{
+    width: fit-content !important;
+}
+
+.height-diff-down{
+    width: fit-content !important;
+}
 
 .boss > .right > button > p{
     margin: 0;
@@ -111,7 +120,7 @@ section:nth-of-type(2)>div {
 }
 
 .wid{
-    width: 70%;
+    width: 40%;
 }
 
 .facts > .left > div{
@@ -214,8 +223,6 @@ section:nth-of-type(5){
         margin: 0;
         justify-self: right;
         width: 100%;
-
-        /* overflow: hidden; */
     }
 
     .facts > .left > div > img:not(.rot){
@@ -233,6 +240,18 @@ section:nth-of-type(5){
 
     .wid{
         width: 50%;
+    }
+
+    .boss > .right > div{
+        margin: 20px 0;
+    }
+
+    .boss > .right{
+        margin: 20px 0;
+    }
+
+    .boss > .left > img{
+        max-height: 300px;
     }
 }
 

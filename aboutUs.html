@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <p class="container">
+    <div class="container">
         <div class="nav">
             <div class="left no-mobile">
                 <p>Home</p>
@@ -43,7 +43,7 @@
             </div>
             <div class="boss">
                 <div class="left">
-                    <img src="./img/dude.jpg" alt="">
+                    <img src="./img/dude_main.png" alt="">
                 </div>
                 <div class="right">
                     <h3>Sumit Ahuja</h3>
@@ -130,7 +130,7 @@
                 <img src="./img/work.png" alt="">
             </div>
         </section>
-        <section>
+        <section class="mov">
             <div class="title">
                 <div>05</div>
                 <h1>Interesting facts</h1>
@@ -147,8 +147,10 @@
             </p>
             <div class="facts">
                 <div class="left">
-                    <img src="./img/stairs.png" alt="">
-                    <div>
+                    <div class="height-diff-down">
+                        <img src="./img/stairs.png" alt="">
+                    </div>
+                    <div class="height-diff-up">
                         <img src="./img/bar.png" alt="">
                         <img src="./img/circle.svg" alt="" class="rot wid">
                     </div>
@@ -185,53 +187,37 @@
             </div>
         </section>
         <section>
-            <div class="top">
-                <p>Got an enquiry? Leave us a message.</p>
-                <div>
-                    <p>MESSAGE</p>
-                    <input type="text" placeholder="Type Here...">
-                </div>
-            </div>
-            <div class="bottom">
+            <div>
                 <div>
                     <img src="./img/KuvalyamLogo.svg" alt="">
+                    <p>© 2021 KUVLAYAM. ALL RIGHTS RESERVED.</p>
                 </div>
                 <div>
                     <div>
-                        <h2>CUSTOMER SERVICE</h2>
-                        <p>EMAIL</p>
-                        <p>FAQS</p>
-                        <p>PROJECT CATALOGUES</p>
+                        <p>TECHNOLOGY PARK</p>
+                        <p>8-14 MARIE CURIE STREET</p>
+                        <p>08042 BARCELONA</p>
                     </div>
                     <div>
-                        <h2>BOOK A VILLA</h2>
-                        <p>EMAIL</p>
-                        <p>FAQS</p>
+                        <p>+34 93 350 55 08</p>
+                        <p>INFO@LOBELIA.EARTH</p>
+                    </div>
+                    <div>
+                        <p>BOOK A VILLA</p>
                         <p>PROJECT CATALOGUES</p>
+                        <p>FAQs</p>
                     </div>
                 </div>
+            </div>
+            <div class="lotus-bottom">
+                <img src="./img/lotus2.png" alt="">
             </div>
         </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let splide = new Splide('.splide', {
-                type: 'loop',
-                autoWidth: true,
-                focus: 'center',
-            }).mount();
-
-            window.addEventListener('resize', function () {
-                splide.go(1)
-            });
-        });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger)
-        const parallaxElements = document.querySelectorAll('[data-parallax]');
 
         var cumulativeOffset = function (element) {
             var top = 0, left = 0;
@@ -249,32 +235,22 @@
 
         gsap.to(".height-diff-up", {
             scrollTrigger: {
-                trigger: "section.dark",
+                trigger: "section.mov",
                 scrub: true,
                 markers: false,
             },
             yPercent: 40
-
         })
 
         gsap.to(".height-diff-down", {
             scrollTrigger: {
-                trigger: "section.dark",
+                trigger: "section.mov",
                 scrub: true,
                 markers: false,
             },
             yPercent: -40
-
         })
 
-
-        // window.addEventListener('scroll', () => {
-        //     const y = window.scrollY;
-        //     parallaxElements.forEach((el, i) => {
-        //         const { top, left } = cumulativeOffset(el);
-        //         el.style.transform = `translateY(-${(y > top) ? y / 5 : 0}px)`;
-        //     });
-        // });
 
         let rot = document.querySelectorAll(".rot")
         gsap.set(rot[0], { y: "-50%", x: "50%" })
