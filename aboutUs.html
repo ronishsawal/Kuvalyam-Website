@@ -287,7 +287,7 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
         gsap.to('.nav', {
             scrollTrigger: {
                 trigger: "section:not(.first)",
-                start: "+=10px",
+                start: "100px",
                 scrub: true,
                 markers: false,
             },
@@ -361,6 +361,12 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
                 }
             })
         }
+
+        let links = document.querySelectorAll('.mob-nav > .links > button')
+
+        links.forEach(link => {
+            link.addEventListener('click', hideNav)
+        })
 
         gsap.to(".height-diff-up", {
             scrollTrigger: {
