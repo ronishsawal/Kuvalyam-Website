@@ -833,7 +833,6 @@ button.splide__pagination__page.is-active {
         grid-template-columns: none;
         grid-template-rows: 50% 50%;
         align-items: center;
-        padding: 60px 0;
     }
 
     .wid {
