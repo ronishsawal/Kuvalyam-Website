@@ -854,7 +854,8 @@ button.splide__pagination__page.is-active {
         width: 35vw;
     } */
     section:nth-of-type(6) {
-        padding: 20px 10vw;
+        padding: 40px 10vw !important;
+        min-height: 250px;
     }
 
     /* section:nth-of-type(6)>.top {
@@ -896,7 +897,8 @@ button.splide__pagination__page.is-active {
     }
 
     section:nth-of-type(6)>div:first-of-type>div:last-of-type {
-        grid-area: top
+        grid-area: top;
+        row-gap: 20px;
     }
 
     section:nth-of-type(6)>div:first-of-type>div:last-of-type {
