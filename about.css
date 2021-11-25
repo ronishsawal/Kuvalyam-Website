@@ -23,15 +23,10 @@ section:nth-of-type(1) {
     padding-top: 15vh !important;
 }
 
-/* section:nth-of-type(2) > .title{
-    margin: 100px 0;
-    margin-bottom: 60px;
-}
 
-.title{
-    margin: 100px 0;
-    margin-top: 140px;
-} */
+section:not(#projects) > .title{
+    margin-bottom: 70px;
+}
 
 .boss{
     display: grid;
@@ -258,6 +253,10 @@ section:nth-of-type(5){
 
     .boss > .left > img{
         max-height: 300px;
+    }
+
+    section:nth-of-type(3){
+        min-height: 500px;
     }
 }
 
