@@ -49,7 +49,7 @@ body {
 .nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(3, 33%);
     place-items: center;
@@ -85,6 +85,12 @@ body {
     padding: 15px 20px;
     cursor: pointer;
     border: solid 1px white;
+}
+
+.logo > img{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 section {
@@ -334,13 +340,22 @@ section:nth-of-type(3) {
     width: 100%;
     margin: 0 auto;
     justify-self: right;
+    max-height: 700px;
 }
 
 .section-left {
     justify-self: left;
 }
 
-.section-left>p {
+.section-left > button{
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.section-left>p, .section-left > .hide > p {
     width: 70%;
     margin-right: auto;
     line-height: 2;
@@ -381,6 +396,12 @@ section:nth-of-type(3) {
 
 .rot {
     z-index: 21;
+}
+
+.hide{
+    position: relative;
+    height: 0;
+    overflow: hidden;
 }
 
 .height-diff-down-img {
@@ -775,7 +796,7 @@ button.splide__pagination__page.is-active {
         padding-top: 100px;
     }
 
-    .section-left>p {
+    .section-left>p, .section-left > .hide > p {
         width: 90%;
         margin-right: auto;
     }

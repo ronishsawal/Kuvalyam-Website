@@ -286,8 +286,8 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
 
         gsap.to('.nav', {
             scrollTrigger: {
-                trigger: "section:not(.first)",
-                start: "100px",
+                trigger: "section.first",
+                start: "middle",
                 scrub: true,
                 markers: false,
             },

@@ -126,24 +126,28 @@
                         self!
                     </p>
                     <p>
-                        Ours is a 15 year old legacy set in a belief of regeneration and tranquility,
-                        that we strive to spell out through every luxury villa we design.
-                        It is not just a mission. It is our true calling. We envisage homes that mirror
-                        the personalities that reside in them!
-                        Our legacy is rooted like the earthy waters where the lotus flower blooms.
-                        We have a keen eye for exceptional design and structure, we thrive in
-                        detailing and personalisation.
-                    </p>
-                    <p>
                         Along with the touch of calm, our classic villas are equipped with every
                         amenity and necessity that your opulent lifestyle demands and desires.
                     </p>
-                    <p>
-                        We are committed to creating a legacy of opulence for posterity.
-                        Join us in this shared dream. Buy a luxury villa and discover the
-                        unparalleled joy of being home.
-                    </p>
-                    <a href="#">Read More</a>
+                    <div class="hide">
+                        <p>
+                            Ours is a 15 year old legacy set in a belief of regeneration and tranquility,
+                            that we strive to spell out through every luxury villa we design.
+                            It is not just a mission. It is our true calling. We envisage homes that mirror
+                            the personalities that reside in them!
+                            Our legacy is rooted like the earthy waters where the lotus flower blooms.
+                            We have a keen eye for exceptional design and structure, we thrive in
+                            detailing and personalisation.
+                        </p>
+                        
+                        <p>
+                            We are committed to creating a legacy of opulence for posterity.
+                            Join us in this shared dream. Buy a luxury villa and discover the
+                            unparalleled joy of being home.
+                        </p>
+                    </div>
+                    <button href="" class="show-hidden">Read More</button>
+                    
                 </div>
                 <div class="section-right">
                     <div class="height-diff-up">
@@ -336,8 +340,8 @@
 
         gsap.to('.nav', {
             scrollTrigger: {
-                trigger: "section:not(.without)",
-                start: "-=1000px",
+                trigger: "section.without",
+                start: "middle",
                 scrub: true,
                 markers: false,
             },
@@ -435,14 +439,12 @@
 
         })
 
-
-        // window.addEventListener('scroll', () => {
-        //     const y = window.scrollY;
-        //     parallaxElements.forEach((el, i) => {
-        //         const { top, left } = cumulativeOffset(el);
-        //         el.style.transform = `translateY(-${(y > top) ? y / 5 : 0}px)`;
-        //     });
-        // });
+        document.querySelector('.show-hidden').addEventListener('click', () => {
+            gsap.to('.hide', {
+                height: 'auto'
+            })
+            document.querySelector('.show-hidden').style.display = 'none'
+        })
 
         let rot = document.querySelectorAll(".rot")
         gsap.set(rot[0], { y: "-50%", x: "50%" })
