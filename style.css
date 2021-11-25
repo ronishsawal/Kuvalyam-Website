@@ -537,12 +537,14 @@ section:nth-of-type(3) {
     place-items: center;
     justify-items: left;
     padding-left: 20px;
+    height: fit-content;
+    align-self: center;
 }
 
 .person>div>p {
     margin: 0;
 
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 section:nth-of-type(5) {
@@ -838,6 +840,11 @@ button.splide__pagination__page.is-active {
         grid-template-columns: none;
         grid-template-rows: 50% 50%;
         align-items: center;
+    }
+
+    .person>div:last-of-type{
+        padding-left: 0;
+        justify-items: center;
     }
 
     .wid {
