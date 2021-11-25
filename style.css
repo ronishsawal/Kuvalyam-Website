@@ -661,10 +661,15 @@ button.splide__pagination__page.is-active {
     text-align: center;
 }
 
-.mob-nav > .links > p{
+.mob-nav > .links > button{
     font-family: 'Philosopher', sans-serif;
     font-size: 2rem;
-    margin-bottom: 50px
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border: none;
+    background: transparent;
+    display: block;
+    text-align: center;
 }
 
 .nline {
