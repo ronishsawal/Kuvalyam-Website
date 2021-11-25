@@ -128,7 +128,28 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
                     “ Our team takes over everything, from an idea and concept development to realization. We believe in
                     traditions and incorporate them within our innovations. All our projects incorporate “
                 </div>
-                <img src="./img/work.png" alt="">
+                <div id="photos">
+                    <img src="./img/SUMIT-VILLA/1J3A2237-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2249-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2258-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2262-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2266-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2273-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2276-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2280-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2284-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2290-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2293-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2302-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2309-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2313-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2318-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2321-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2324-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2327-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2330-HDR.jpg" alt="">
+                    <img src="./img/SUMIT-VILLA/1J3A2333-HDR.jpg" alt="">
+                </div>
             </div>
         </section>
         <section class="mov dark">
@@ -272,6 +293,17 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
         })
         rot[1].addEventListener('mouseleave', () => {
             animaa.play()
+        })
+
+        let photosDiv = document.querySelector('#photos')
+        let infoDiv = document.querySelector('.info')
+        gsap.set(infoDiv, {opacity: 0})
+        photosDiv.addEventListener('mouseenter', () => {
+            gsap.to(infoDiv, {opacity: 1})
+        })
+
+        photosDiv.addEventListener('mouseleave', () => {
+            gsap.to(infoDiv, {opacity: 0})
         })
     </script>
 </body>

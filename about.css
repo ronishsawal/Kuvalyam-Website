@@ -4,12 +4,12 @@
     line-height: 32px;
 }
 
-.nav{
+.nav {
     color: black;
 }
 
-section{
-    padding: 80px 15vw !important; 
+section {
+    padding: 80px 15vw !important;
 }
 
 section:nth-of-type(2)>div {
@@ -24,63 +24,64 @@ section:nth-of-type(1) {
 }
 
 
-section:not(#projects) > .title{
+section:not(#projects)>.title {
     margin-bottom: 70px;
 }
 
-.boss{
+.boss {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-.boss > .right{
+.boss>.right {
     padding: 0 50px;
 }
 
-.boss > .left > img{
-    height: 100%;
+.boss>.left>img {
+    height: auto;
+    max-width: 100%;
 }
 
-#projects{
+#projects {
     padding-right: 0 !important;
 }
 
-.boss > .right > h3, .boss > .right > p{
+.boss>.right>h3, .boss>.right>p {
     margin: 5px 0;
 }
 
-.boss > .right > p{
+.boss>.right>p {
     font-style: italic;
 }
 
-.boss > .right > div{
+.boss>.right>div {
     margin: 35px 0;
 }
 
-.boss > .right > button{
+.boss>.right>button {
     border: solid black 1px;
     background-color: white;
     padding: 15px 30px;
 }
 
-.height-diff-up{
+.height-diff-up {
     width: fit-content !important;
 }
 
-.height-diff-down{
+.height-diff-down {
     width: fit-content !important;
 }
 
-.boss > .right > button > p{
+.boss>.right>button>p {
     margin: 0;
 }
 
-.work > img{
+.work>img {
     position: relative;
     width: 100%;
 }
 
-.work{
+.work {
     position: relative;
 }
 
@@ -89,7 +90,7 @@ section:not(#projects) > .title{
     margin-bottom: 90px;
 }
 
-.work > .info{
+.work>.info {
     position: absolute;
     top: 0;
     right: 0;
@@ -103,75 +104,134 @@ section:not(#projects) > .title{
     line-height: 32px;
 }
 
-.facts{
+.facts {
     margin: 130px 0;
     display: grid;
     grid-template-columns: auto 60%;
     position: relative;
 }
 
-.facts > .left > img{
+.facts>.left>img {
     /* height: 100%; */
     margin-right: 30px;
 }
 
-.facts > .left{
+.facts>.left {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-.wid{
+.wid {
     width: 40%;
 }
 
-.facts > .left > div{
+.facts>.left>div {
     display: inline;
     position: relative;
     height: 100%;
 }
 
-.facts > .right{
+.facts>.right {
     padding: 0 80px;
     align-self: center;
 }
 
-.facts > .left{
+.facts>.left {
     position: relative;
 }
 
-.stat{
+.stat {
     display: grid;
     grid-template-columns: auto auto;
     place-items: center;
     width: max-content;
 }
 
-.num{
+.num {
     font-family: 'Philosopher', sans-serif;
     font-size: 3rem;
     margin-right: 20px;
 }
 
-.nav>div>div{
+.nav>div>div {
     border-color: black;
 }
 
-section:nth-of-type(5){
+section:nth-of-type(5) {
     padding: 0 !important;
 }
 
-@media(max-width: 1500px) {
-
+#photos {
+    /* Prevent vertical gaps */
+    line-height: 0;
+    width: 100%;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5;
+    column-gap: 0px;
+    align-items: start;
 }
 
-@media(max-width: 1300px) {
-
+#photos img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+    padding: 15px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
 }
+
+#photos img:hover{
+    transform: scale(1.1);
+}
+
+#photos img:nth-of-type(2n + 1) {
+    padding-bottom: 30px;
+    padding-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    #photos {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (max-width: 1000px) {
+    #photos {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 800px) {
+    #photos {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    #photos {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media(max-width: 1500px) {}
+
+@media(max-width: 1300px) {}
 
 
 @media(max-width: 900px) {
 
-    *{
+    * {
         line-height: 20px;
     }
 
@@ -179,58 +239,58 @@ section:nth-of-type(5){
         padding: 50px 10vw !important;
     }
 
-    .boss{
+    .boss {
         grid-template-columns: none;
         grid-template-rows: auto auto;
     }
 
-    .boss > .right{
+    .boss>.right {
         padding: 0;
     }
 
-    .work > .info{
+    .work>.info {
         width: 40vw;
         line-height: 20px;
         padding: 10px;
         font-size: 0.7rem;
     }
 
-    .facts{
+    .facts {
         margin: 90px 0;
         margin-bottom: 50px;
     }
 
-    .facts > .left{
+    .facts>.left {
         padding: 0 20px;
         position: relative;
         width: 100%;
     }
 
-    .facts > .right{
+    .facts>.right {
         padding: 0;
     }
 
-    .stat{
+    .stat {
         text-align: center;
     }
 
-    section:not(#projects) > .title{
+    section:not(#projects)>.title {
         margin-bottom: 40px;
     }
 
-    .facts > .left > img{
+    .facts>.left>img {
         /* width: 35vw; */
         width: 90%;
         margin: 0;
     }
 
-    .facts > .left > div{
+    .facts>.left>div {
         margin: 0;
         justify-self: right;
         width: 100%;
     }
 
-    .facts > .left > div > img:not(.rot){
+    .facts>.left>div>img:not(.rot) {
         /* width: 25vw; */
         margin: 0;
         width: 80%;
@@ -238,28 +298,28 @@ section:nth-of-type(5){
         margin-left: auto;
     }
 
-    .facts{
+    .facts {
         grid-template-columns: none;
         grid-template-rows: auto auto;
     }
 
-    .wid{
+    .wid {
         width: 50%;
     }
 
-    .boss > .right > div{
+    .boss>.right>div {
         margin: 20px 0;
     }
 
-    .boss > .right{
+    .boss>.right {
         margin: 20px 0;
     }
 
-    .boss > .left > img{
+    .boss>.left>img {
         max-height: 300px;
     }
 
-    section:nth-of-type(3){
+    section:nth-of-type(3) {
         min-height: 600px;
         display: grid;
         grid-template-columns: 100%;
@@ -267,10 +327,6 @@ section:nth-of-type(5){
     }
 }
 
-@media(max-width: 450px) {
-    
-}
+@media(max-width: 450px) {}
 
-@media(max-height: 700px) {
-    
-}
+@media(max-height: 700px) {}
