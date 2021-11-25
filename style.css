@@ -42,24 +42,25 @@ body {
     /* overflow-x: hidden; */
 }
 
-.logo > img{
+.logo>img {
     cursor: pointer;
 }
 
 .nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 33%);
     place-items: center;
     /* margin: 20px auto; */
-    padding: 20px 7vw;
+    padding: 40px 7vw;
     left: 50%;
     transform: translate(-50%);
     color: white;
-    z-index: 1;
+    z-index: 5;
     box-sizing: border-box;
+    background: transparent;
 }
 
 .nav>.left {
@@ -73,7 +74,7 @@ body {
 .nav>div>p, .nav>div>div {
     position: relative;
     display: inline-block;
-    margin: 20px 30px;
+    margin: 0px 30px;
     cursor: pointer;
 }
 
@@ -538,7 +539,7 @@ section:nth-of-type(6)>div:first-of-type>div:first-of-type>img {
     width: 80%;
 }
 
-section:nth-of-type(6)>div:first-of-type>div:last-of-type > div > p{
+section:nth-of-type(6)>div:first-of-type>div:last-of-type>div>p {
     text-transform: capitalize;
 }
 
@@ -549,7 +550,7 @@ section:nth-of-type(6)>div:first-of-type>div:last-of-type > div > p{
     z-index: 1;
 }
 
-.lotus-bottom > img{
+.lotus-bottom>img {
     position: relative;
     display: block;
 }
@@ -635,6 +636,70 @@ button.splide__pagination__page.is-active {
     background: #000000;
 }
 
+.burger {
+    position: fixed;
+    top: 30px;
+    right: 35px;
+    height: 25px;
+    width: 35px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.mob-nav {
+    position: fixed;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    clip-path: ellipse(0% 0% at 50% 0%);
+    display: grid;
+    grid-template-rows: 85% 15%;
+    justify-items: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 5;
+    background: white;
+    text-align: center;
+}
+
+.mob-nav > .links > p{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 50px
+}
+
+.nline {
+    position: absolute;
+    width: 90%;
+    margin: 0 auto;
+    /* margin-top: 10px; */
+    height: 2px;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); */
+    background-color: #B69B6E;
+    transform-origin: left;
+}
+
+.nline:nth-of-type(1) {
+    top: 40%;
+    /* top: 0;
+    transform: rotate(45deg); */
+}
+
+/* .line:nth-of-type(2) {
+    top: 60%;
+  } */
+
+.nline:nth-of-type(2) {
+    top: 80%;
+    /* top: 90%;
+    transform: rotate(-45deg); */
+}
+
+.mobile {
+    display: none;
+}
+
 @media(max-width: 1500px) {
     .nav {
         padding: 20px 10vw;
@@ -648,7 +713,7 @@ button.splide__pagination__page.is-active {
     }
 
     .nav>div>p, .nav>div>div {
-        margin: 20px 15px;
+        margin: 0px 15px;
     }
 
 }
@@ -657,6 +722,14 @@ button.splide__pagination__page.is-active {
 @media(max-width: 900px) {
     :root {
         font-size: 13px;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile.grid{
+        display: grid;
     }
 
     .no-mobile {
@@ -704,7 +777,7 @@ button.splide__pagination__page.is-active {
 
     .saying {
         margin: 50px auto;
-        margin-top: 350px;
+        margin-top: 150px;
         width: 80%;
     }
 
@@ -752,21 +825,21 @@ button.splide__pagination__page.is-active {
     section:nth-of-type(6)>.bottom>div:nth-of-type(2)>div {
         margin: 0 auto;
     } */
-    
+
 
     section:nth-of-type(6)>div:first-of-type {
         display: grid;
         grid-template-rows: 60% 40%;
-        grid-template-areas: 'top' 'bottom';
+        grid-template-areas: 'top''bottom';
         grid-template-columns: none;
         justify-items: center;
     }
 
-    section:nth-of-type(6)>div:first-of-type > div:first-of-type{
+    section:nth-of-type(6)>div:first-of-type>div:first-of-type {
         grid-area: bottom
     }
 
-    section:nth-of-type(6)>div:first-of-type > div:last-of-type{
+    section:nth-of-type(6)>div:first-of-type>div:last-of-type {
         grid-area: top
     }
 
@@ -783,7 +856,7 @@ button.splide__pagination__page.is-active {
         margin-top: 40px;
     }
 
-    .person{
+    .person {
         grid-template-columns: none;
         grid-template-rows: auto auto;
         place-items: center;
@@ -795,7 +868,7 @@ button.splide__pagination__page.is-active {
         padding-top: 100px !important;
     }
 
-    .person > div:first-of-type{
+    .person>div:first-of-type {
         padding-bottom: 20px;
     }
 
@@ -807,6 +880,11 @@ button.splide__pagination__page.is-active {
         background: #19312ead;
     }
 
+    .nav{
+        position: absolute;
+        background: transparent !important;
+    }
+
     .lotus-left>img {
         width: 30vw;
     }
@@ -815,7 +893,7 @@ button.splide__pagination__page.is-active {
         width: 30vw;
     }
 
-    .lotus-bottom > img{
+    .lotus-bottom>img {
         width: 40vw;
     }
 

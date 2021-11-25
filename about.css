@@ -6,6 +6,9 @@
 
 .nav {
     color: black;
+    /* background: #19312E; */
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 section {
@@ -151,10 +154,6 @@ section:not(#projects)>.title {
     font-family: 'Philosopher', sans-serif;
     font-size: 3rem;
     margin-right: 20px;
-}
-
-.nav>div>div {
-    border-color: black;
 }
 
 section:nth-of-type(5) {
