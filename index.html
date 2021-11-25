@@ -38,10 +38,12 @@
         <div class="mob-nav mobile grid">
             <div class="links">
                 <button onclick="location.href = '#'">Home</button>
-                <button onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Projects</button>
+                <button
+                    onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Projects</button>
                 <button>Blogs</button>
                 <button onclick="location.href = './aboutUs.html'">About us</button>
-                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</button>
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact
+                    us</button>
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
@@ -50,7 +52,8 @@
         <section class="without">
             <div class="center">
                 <img src="./img/section1.svg" alt="">
-                <div onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Explore Projects</div>
+                <div onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Explore Projects
+                </div>
             </div>
             <div class="overlay top"></div>
             <div class="video parallax" data-parallax>
@@ -73,33 +76,47 @@
                         <img class="samp" src="./img/sample1.jpg" alt="">
                     </div>
                     <div class="item-content">
-                        <p>Established in Delhi, INDIA in 2005 Dreamz</p>
-                        <p>Project is one of the oldest and luxurious</p>
-                        <p>interior design </p>
+                        <p>
+                            Want to buy a classic villa? Say hello to
+                            splendour! Luxury finds its perfect spot as we
+                            welcome you to our lavish property. The
+                            architectural design is envisioned to make you
+                            feel at home but at the same time relish the sheer
+                            magnificence.
+                        </p>
+
                     </div>
                 </div>
                 <div class="item">
                     <img class="samp" src="./img/Kuvalyam_Resized/1J3A2258-HDR.jpg" alt="">
                     <div class="item-content">
-                        <p>Established in Delhi, INDIA in 2005 Dreamz</p>
-                        <p>Project is one of the oldest and luxurious</p>
-                        <p>interior design </p>
+                        <p>Step into a contemporary space with a touch of
+                            vintage charm. Resplendent in its architecture
+                            and design, Villa Assagao-Goa is a high end villa
+                            designed to suit your luxurious lifestyle.
+                        </p>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="samp"  src="./img/Kuvalyam_Resized/1J3A2244-HDR.jpg" alt="">
+                    <img class="samp" src="./img/Kuvalyam_Resized/1J3A2244-HDR.jpg" alt="">
                     <div class="item-content">
-                        <p>Established in Delhi, INDIA in 2005 Dreamz</p>
-                        <p>Project is one of the oldest and luxurious</p>
-                        <p>interior design </p>
+                        <p>
+                            The interiors are the perfect balance of cosy corners
+                            and luxurious living spaces. Equipped with lavish
+                            furnishings and upholstery, the luxury villas in Goa are a
+                            fine balance between functionality and decadence.
+                        </p>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="samp"  src="./img/Kuvalyam_Resized/1J3A2284-HDR.jpg" alt="">
+                    <img class="samp" src="./img/Kuvalyam_Resized/1J3A2284-HDR.jpg" alt="">
                     <div class="item-content">
-                        <p>Established in Delhi, INDIA in 2005 Dreamz</p>
-                        <p>Project is one of the oldest and luxurious</p>
-                        <p>interior design </p>
+                        <p>
+                            French windows, mood lighting and
+                            an in-built pool are some of the accents that make
+                            our premium villas the perfect upgrade for your
+                            life. Find your bliss in our opulent, well-equipped
+                        </p>
                     </div>
                 </div>
             </div>
@@ -139,7 +156,7 @@
                             We have a keen eye for exceptional design and structure, we thrive in
                             detailing and personalisation.
                         </p>
-                        
+
                         <p>
                             We are committed to creating a legacy of opulence for posterity.
                             Join us in this shared dream. Buy a luxury villa and discover the
@@ -147,7 +164,7 @@
                         </p>
                     </div>
                     <button href="" class="show-hidden">Read More</button>
-                    
+
                 </div>
                 <div class="section-right">
                     <div class="height-diff-up">
@@ -256,7 +273,8 @@
             </div>
             <div class="center">
                 <h1>#ALegacyOfLuxury</h1>
-                <div onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Explore Projects</div>
+                <div onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Explore Projects
+                </div>
             </div>
         </section>
         <section id="contact">
@@ -357,11 +375,11 @@
         let status = false
         let burger = document.querySelector('.burger')
         burger.addEventListener('click', () => {
-            if(!status){
+            if (!status) {
                 showNav()
                 console.log('here')
             }
-            else{
+            else {
                 hideNav()
             }
         })
