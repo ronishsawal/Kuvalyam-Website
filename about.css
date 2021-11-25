@@ -20,6 +20,10 @@ section:nth-of-type(2)>div {
     margin: 0;
 }
 
+.scroll{
+    margin-top: 30px !important;
+}
+
 section:nth-of-type(1) {
     min-height: 700px;
     padding: 0;
@@ -37,7 +41,7 @@ section:not(#projects)>.title {
 }
 
 .boss>.right {
-    padding: 0 50px;
+    padding: 0 70px;
 }
 
 .boss>.left>img {
@@ -108,10 +112,11 @@ section:not(#projects)>.title {
 }
 
 .facts {
-    margin: 130px 0;
+    margin: 130px auto;
     display: grid;
-    grid-template-columns: auto 60%;
+    grid-template-columns: auto 50%;
     position: relative;
+    width: 80%;
 }
 
 .facts>.left>img {
@@ -135,8 +140,9 @@ section:not(#projects)>.title {
 }
 
 .facts>.right {
-    padding: 0 80px;
+    padding: 0px 80px;
     align-self: center;
+
 }
 
 .facts>.left {
@@ -150,9 +156,14 @@ section:not(#projects)>.title {
     width: max-content;
 }
 
+.stat > p:not(.num){
+    font-size: 1.2rem;
+}
+
 .num {
     font-family: 'Philosopher', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
+    margin: 50px 0;
     margin-right: 20px;
 }
 
