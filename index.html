@@ -19,16 +19,16 @@
     <div class="container">
         <div class="nav">
             <div class="left no-mobile">
-                <p onclick="location.href = './index.html'">Home</p>
-                <p>Projects</p>
+                <p>Home</p>
+                <p onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Projects</p>
                 <p>Blogs</p>
             </div>
             <div class="logo">
-                <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
+                <img src="./img/KuvalyamLogo.svg" alt="">
             </div>
             <div class="right no-mobile">
                 <p onclick="location.href = './aboutUs.html'">About us</p>
-                <div>Contact us</div>
+                <div onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</div>
             </div>
         </div>
         <div class="burger mobile">
@@ -37,11 +37,11 @@
         </div>
         <div class="mob-nav mobile grid">
             <div class="links">
-                <button onclick="location.href = './index.html'">Home</button>
-                <button>Projects</button>
+                <button onclick="location.href = '#'">Home</button>
+                <button onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Projects</button>
                 <button>Blogs</button>
                 <button onclick="location.href = './aboutUs.html'">About us</button>
-                <button>Contact us</button>
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</button>
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
@@ -255,7 +255,7 @@
                 <div>Explore Projects</div>
             </div>
         </section>
-        <section>
+        <section id="contact">
             <div>
                 <div>
                     <img src="./img/KuvalyamLogo.svg" alt="">
@@ -350,9 +350,6 @@
 
         let navEle = document.querySelector('.mob-nav')
         let lines = document.querySelectorAll('.burger > .nline')
-        console.log(lines)
-        // let startBurgerAnimation = gsap.timeline()
-        // let endBurgerAnimation = gsap.timeline()
         let status = false
         let burger = document.querySelector('.burger')
         burger.addEventListener('click', () => {
@@ -411,6 +408,12 @@
                 }
             })
         }
+
+        let links = document.querySelectorAll('.mob-nav > .links > button')
+
+        links.forEach(link => {
+            link.addEventListener('click', hideNav)
+        })
 
         gsap.to(".height-diff-up", {
             scrollTrigger: {

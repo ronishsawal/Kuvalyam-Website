@@ -21,15 +21,15 @@
         <div class="nav">
             <div class="left no-mobile">
                 <p onclick="location.href = './index.html'">Home</p>
-                <p>Projects</p>
+                <p onclick="location.href = './index.html#projects'">Projects</p>
                 <p>Blogs</p>
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
             </div>
             <div class="right no-mobile">
-                <p onclick="location.href = './aboutUs.html'">About us</p>
-                <div>Contact us</div>
+                <p>About us</p>
+                <div onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</div>
             </div>
         </div>
         <div class="burger mobile">
@@ -39,10 +39,10 @@
         <div class="mob-nav mobile grid">
             <div class="links">
                 <<button onclick="location.href = './index.html'">Home</button>
-                <button>Projects</button>
+                <button onclick="location.href = './index.html#projects'">Projects</button>
                 <button>Blogs</button>
                 <button onclick="location.href = './aboutUs.html'">About us</button>
-                <button>Contact us</button>
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</button>
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
@@ -141,26 +141,26 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
                     traditions and incorporate them within our innovations. All our projects incorporate “
                 </div>
                 <div id="photos">
-                    <img src="./img/SUMIT-VILLA/1J3A2237-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2249-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2258-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2262-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2266-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2273-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2276-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2280-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2284-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2290-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2293-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2302-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2309-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2313-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2318-HDR.jpg" alt="">
-                    <!-- <img src="./img/SUMIT-VILLA/1J3A2321-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2324-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2327-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2330-HDR.jpg" alt="">
-                    <img src="./img/SUMIT-VILLA/1J3A2333-HDR.jpg" alt=""> -->
+                    <img src="./img/Kuvalyam_Resized/1J3A2237-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2249-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2258-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2262-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2266-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2273-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2276-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2280-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2284-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2290-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2293-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2302-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2309-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2313-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2318-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2321-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2324-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2327-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2330-HDR.jpg" alt="">
+                    <img src="./img/Kuvalyam_Resized/1J3A2333-HDR.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -220,7 +220,7 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
                 <div>Explore Projects</div>
             </div>
         </section>
-        <section>
+        <section id="contact">
             <div>
                 <div>
                     <img src="./img/KuvalyamLogo.svg" alt="">
