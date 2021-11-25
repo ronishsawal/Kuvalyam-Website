@@ -42,9 +42,9 @@ body {
     /* overflow-x: hidden; */
 }
 
-/* .logo > img{
-    width: 130%;
-} */
+.logo > img{
+    cursor: pointer;
+}
 
 .nav {
     position: absolute;
