@@ -567,7 +567,7 @@ section:nth-of-type(5)>.center>h1 {
 
 section:nth-of-type(6) {
     background: #19312E;
-    padding: 100px 15vw;
+    padding: 100px 10vw;
     color: white;
     min-height: 450px;
 }
@@ -783,6 +783,14 @@ button.splide__pagination__page.is-active {
         margin: 0px 15px;
     }
 
+    section:nth-of-type(6){
+        padding: 100px 5vw;
+    }
+
+    section:nth-of-type(6)>div:first-of-type{
+        grid-template-columns: 30% 70%;
+    }
+
 }
 
 
@@ -927,6 +935,7 @@ button.splide__pagination__page.is-active {
     section:nth-of-type(6)>div:first-of-type>div:last-of-type {
         grid-area: top;
         row-gap: 20px;
+        column-gap: 20px;
     }
 
     section:nth-of-type(6)>div:first-of-type>div:last-of-type {
