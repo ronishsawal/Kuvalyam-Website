@@ -282,9 +282,10 @@ section:nth-of-type(5) {
     }
 
     .facts>.left {
-        padding: 0 20px;
+        padding: 50px 20px;
         position: relative;
         width: 100%;
+        
     }
 
     .facts>.right {
