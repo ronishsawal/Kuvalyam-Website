@@ -21,14 +21,16 @@
         <div class="nav">
             <div class="left no-mobile">
                 <p onclick="location.href = './index.html'">Home</p>
-                <p onclick="location.href = './index.html#projects'">Projects</p>
-                <p>Blogs</p>
+                <p>About us</p>
+
+                <!-- <p>Blogs</p> -->
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
             </div>
             <div class="right no-mobile">
-                <p>About us</p>
+                <p onclick="location.href = './index.html#projects'">Projects</p>
+
                 <div onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</div>
             </div>
         </div>
@@ -42,7 +44,8 @@
                 <button onclick="location.href = './index.html#projects'">Projects</button>
                 <button>Blogs</button>
                 <button onclick="location.href = './aboutUs.html'">About us</button>
-                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact us</button>
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact
+                    us</button>
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./img/KuvalyamLogo.svg" alt="">
@@ -66,15 +69,16 @@
                     <p>Director</p>
                     <div>
                         Sumit Ahuja’s is a tale of turning his dreams into reality. He had humble
-beginnings as a site supervisor yet craved fulfilment in his career to reflect
-his dreams. One fortunate day, he noticed a lapse in the real estate industry
-and decided to make his mark in it.
-He devoted himself to acquiring technical and practical knowledge behind
-building homes. A keen eye for design and a sense of what makes
-luxury are intrinsic to his personality. And so, Kuvalyam was born, out of
-the instinct of giving his patrons a second home that is a true escape from
-busy, urban spaces.
-It is his promise of bestowing luxury with modern opulence that lies at the heart of every Kuvalyam home!
+                        beginnings as a site supervisor yet craved fulfilment in his career to reflect
+                        his dreams. One fortunate day, he noticed a lapse in the real estate industry
+                        and decided to make his mark in it.
+                        He devoted himself to acquiring technical and practical knowledge behind
+                        building homes. A keen eye for design and a sense of what makes
+                        luxury are intrinsic to his personality. And so, Kuvalyam was born, out of
+                        the instinct of giving his patrons a second home that is a true escape from
+                        busy, urban spaces.
+                        It is his promise of bestowing luxury with modern opulence that lies at the heart of every
+                        Kuvalyam home!
                     </div>
                 </div>
             </div>
@@ -258,13 +262,18 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
                         <p>NEW DELHI-110028</p>
                     </div>
                     <div>
-                        <a style="max-width: 95%; width: max-content; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;" href="tel:+91-11-41446883">+91-11-41446883</a>
-                        <a style="max-width: 95%; width: max-content; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;" href="mailto:dreamzproject@outlook.in">DREAMZPROJECT@OUTLOOK.IN</a>
+                        <a style="max-width: 95%; width: max-content; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;"
+                            href="tel:+91-11-41446883">+91-11-41446883</a>
+                        <a style="max-width: 95%; width: max-content; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;"
+                            href="mailto:dreamzproject@outlook.in">DREAMZPROJECT@OUTLOOK.IN</a>
                     </div>
                     <div class="selections">
-                        <p>BOOK A VILLA</p>
-                        <p>PROJECT CATALOGUES</p>
-                        <p>FAQs</p>
+                        <a style="max-width: 95%; font-weight: bold; width: max-content; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;" style="margin: 1em 0; margin-bottom: 0;" onclick="location.href='./index.html#projects'">PROJECT CATALOGUES
+                        </a>
+                        <a style="max-width: 95%; font-weight: bold; width: max-content; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;"
+                            href="tel:+91-11-41446883">CALL US</a>
+                        <a style="max-width: 95%; width: max-content; font-weight: bold; overflow-x: hidden; display: block; color: white; margin: 1em 0; text-overflow: ellipsis; text-decoration: none; cursor: pointer;"
+                            href="mailto:dreamzproject@outlook.in">EMAIL US</a>
                     </div>
                 </div>
             </div>
@@ -331,11 +340,11 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
         let status = false
         let burger = document.querySelector('.burger')
         burger.addEventListener('click', () => {
-            if(!status){
+            if (!status) {
                 showNav()
                 console.log('here')
             }
-            else{
+            else {
                 hideNav()
             }
         })
@@ -393,7 +402,7 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
             link.addEventListener('click', hideNav)
         })
 
-         gsap.to(".height-diff-up-img", {
+        gsap.to(".height-diff-up-img", {
             scrollTrigger: {
                 trigger: ".facts",
                 scrub: true,
@@ -437,13 +446,13 @@ It is his promise of bestowing luxury with modern opulence that lies at the hear
 
         let photosDiv = document.querySelector('#photos')
         let infoDiv = document.querySelector('.info')
-        gsap.set(infoDiv, {opacity: 0})
+        gsap.set(infoDiv, { opacity: 0 })
         photosDiv.addEventListener('mouseenter', () => {
-            gsap.to(infoDiv, {opacity: 1})
+            gsap.to(infoDiv, { opacity: 1 })
         })
 
         photosDiv.addEventListener('mouseleave', () => {
-            gsap.to(infoDiv, {opacity: 0})
+            gsap.to(infoDiv, { opacity: 0 })
         })
     </script>
 </body>

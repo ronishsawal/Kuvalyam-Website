@@ -527,6 +527,8 @@ section:nth-of-type(3) {
 .selections > p{
     font-weight: bold;
     margin: 20px 0;
+    /* text-decoration: underline; */
+    cursor: pointer;
 }
 
 .person>div:first-of-type>img {
