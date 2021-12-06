@@ -203,8 +203,10 @@ section:nth-of-type(5) {
     transform: scale(1.1);
 }
 
-.height-diff-up-img, .height-diff-down-img{
-    width: 80%;
+
+
+.height-diff-up-img > img:not(.rot), .height-diff-down-img > img{
+    width: 13vw
 }
 
 /* #photos img:nth-of-type(2n + 1) {
@@ -326,7 +328,7 @@ section:nth-of-type(5) {
 
     .facts>.left>div {
         margin: 0;
-        justify-self: right;
+        justify-self: center;
         width: 100%;
     }
 
@@ -336,6 +338,15 @@ section:nth-of-type(5) {
         width: 80%;
         display: block;
         margin-left: auto;
+    }
+
+    .height-diff-up-img, .height-diff-down-img {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .height-diff-up-img > img:not(.rot), .height-diff-down-img > img{
+        width: 30vw;
     }
 
     .facts {
