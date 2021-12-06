@@ -799,9 +799,19 @@ button.splide__pagination__page.is-active {
 
     section:nth-of-type(6)>div:first-of-type{
         grid-template-columns: 30% 70%;
+        column-gap: 50px;
     }
 
 }
+
+@media(max-width: 1000px) {
+    section:nth-of-type(6)>div:first-of-type{
+        grid-template-columns: 30% 70%;
+        column-gap: 20px;
+    }
+
+}
+
 
 
 @media(max-width: 900px) {
@@ -1036,7 +1046,7 @@ button.splide__pagination__page.is-active {
 }
 
 @media(max-height: 700px) {
-    section:nth-of-type(1), section:nth-of-type(5) {
+    /* section:nth-of-type(1), section:nth-of-type(5) {
         min-height: 700px;
-    }
+    } */
 }
