@@ -806,6 +806,10 @@ button.splide__pagination__page.is-active {
         column-gap: 50px;
     }
 
+    #contact{
+        font-size: 1rem;
+    }
+
 }
 
 @media(max-width: 1000px) {
@@ -813,6 +817,13 @@ button.splide__pagination__page.is-active {
         grid-template-columns: 30% 70%;
         column-gap: 20px;
     }
+
+    section:nth-of-type(6)>div:first-of-type>div:last-of-type{
+        grid-template-columns: 40% 40% 20%;
+    }
+
+
+
 
 }
 
